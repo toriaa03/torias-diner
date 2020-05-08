@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+
+    <h1>Welcome to Toria's Diner!</h1>
+  
+</body>
+
+
+<script>
+    const mainMenu = [
+  'Spaghetti',
+  'Alfredo Pasta',
+  'Steak with Mashed Potatoes'
+];
+const sideMenu = [
+  'Breadsticks',
+  'Fried onions',
+  'Mozarella sticks'
+];
+
+
+function priceList() {
+  const spaghetti = 10.75;
+  const alfredoPasta = 12.00;
+  const steak = 14.50;
+  const breadsticks = 2.50;
+  const friedOnions = 4.00;
+  const mozarellaSticks = 5.25;
+};
+
+
+// const [10.75, 12.00, 14.50] = mainMenu;
+// const [2.50, 4.00, 5.25] = sideMenu;
+// console.log(10.75);
+
+
+function fullMenu() {
+  for (const entree in mainMenu) {
+    console.log("Entrees: " + mainMenu[entree]);
+  };
+  for (const side in sideMenu) {
+    console.log("Sides: " + mainMenu[side]);
+  };
+};
+
+
+// const userEntreeSelection = mainMenu[2];
+//   if(userEntreeSelection === mainMenu[2]) {
+//     console.log('Great choice')
+//   } else if (userEntreeSelection == mainMenu[4]) {
+//     console.log('Yum, my favorite')
+//   }
+// };
+
+
+Greetings = () => {
+  const toriasDiner = prompt("Welcome to Toria's Diner. Would you like a minute to take a look at our menu?")
+  if (toriasDiner === 'Yes', 'Yeah', 'Sure', 'Of course', 'Definitely') {
+    console.log(fullMenu())
+  };
+};
+
+
+userEntreeSelection = () => {
+  const entreeSelection = prompt("Okay. What will be your entree for today?");
+    if (entreeSelection === mainMenu[0]) {
+      console.log(`Sounds good!`);
+    } else if (entreeSelection === mainMenu[1]) {
+      console.log(`My favorite!`);
+    } else if (entreeSelection === mainMenu[2]) {
+      console.log(`That's a great choice!`);
+    } else {
+      console.log(`Sorry, I don't believe we have that on the menu.`);
+    };
+};
+
+
+userSideSelection = () => {
+  const sideSelection = prompt("Great. Now for your side choices?");
+    if (sideSelection === sideMenu[0]) {
+      console.log(`Alright, I'll be back with your order in no time!`);
+    } else if (sideSelection === sideMenu[1]) {
+      console.log(`Awesome. I'll be back soon with your order.`);
+    } else if (sideSelection === sideMenu[2]) {
+      console.log(`Perfect! I'll have your order right out.`);
+    } else {
+      console.log(`Sorry, I don't believe we have that on the menu.`);
+    };
+}
+
+
+Greetings();
+userEntreeSelection();
+userSideSelection();
+</script>
+</html>
